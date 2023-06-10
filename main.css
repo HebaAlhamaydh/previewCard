@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;700&display=swap');
+:root{
+    --Bright-orange:hsl(31, 77%, 52%);
+    --Dark-cyan:hsl(184, 100%, 22%);
+    --Very-dark-cyan: hsl(179, 100%, 13%);
+    --white:hsla(0, 0%, 100%, 0.75);
+    --light-gray:hsl(0, 0%, 95%);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lexend Deca', sans-serif;
+    background-color: var(--white);
+}
+.container {
+    display: flex;
+    /* align-items: center; */
+    /* background-color: var(--light-gray); */
+    /* height: 100vh;
+   width:90%; */
+   height:400px;
+   width:90%; 
+   justify-content: center;
+   margin: 100px auto;
+}
+@media(max-width:767px){
+    .container {
+        flex-direction: column;
+        height: 100vh;
+        margin: 50px auto;
+    }
+    .item1 {
+        /* border-radius: 12px 12px 0 0;  */
+    }
+}
+.item1,
+.item2,
+.item3 {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* gap:1rem; */
+    padding: 20px;
+/* width: calc(100% /3); */
+    
+}
+.item1 {
+    border-radius: 12px 0 0 12px; 
+    background-color:var(--Bright-orange);
+}
+.title {
+    color:var(--light-gray);
+    text-transform: uppercase;
+    letter-spacing: -3px;
+    font-weight: normal;
+}
+.item2 {
+    background-color: var(--Dark-cyan);
+}
+.item3 {
+    border-radius:  0 12px 12px 0; 
+    background-color: var(--Very-dark-cyan);
+}
+
+@media(max-width:767px){
+   
+    .item1 {
+        border-radius: 12px 12px 0 0; 
+    }
+    .item3 {
+        border-radius: 0 0  12px 12px; 
+    }
+}
+.button {
+    background-color: var(--light-gray);
+    border-radius: 15px;
+    border: none;
+    padding: 10px 20px;
+    width:50%;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+.item1 .button{
+   
+    color: var(--Bright-orange);
+}
+.item1 .button:hover{
+    color:white;
+    border:1px solid var(--white);
+    background-color: var(--Bright-orange); 
+}
+.item2 .button{
+
+    color: var(--Dark-cyan);
+}
+.item2 .button:hover{
+    color:white;
+    border:1px solid var(--white);
+    background-color: var(--Dark-cyan); 
+}
+.item3 .button{
+  
+    color: var(--Very-dark-cyan);
+}
+.item3 .button:hover{
+    color:white;
+    border:1px solid var(--white);
+    background-color: var(--Very-dark-cyan);
+}
+
+.text {
+    color: var(--white);
+line-height: 1.4;
+}
